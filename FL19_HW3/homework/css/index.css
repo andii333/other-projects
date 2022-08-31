@@ -1,0 +1,42 @@
+body{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center
+}
+main{
+    display: flex;
+    flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 50%;
+}
+.start{
+margin: 5% ;
+width: 10%;
+}
+.hidden{
+    display: none;
+}
+.nohiden{
+    display: block;
+}
+
+.characters-list{
+    width: 100%;
+    display: flex;
+        justify-content: center;
+        display: none;
+}
+
+.view {
+    display: block;
+}
+.characters-list > *{
+   margin: 2%;
+}
+#left-field>*{
+margin: 20px;
+}

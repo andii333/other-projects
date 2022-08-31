@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+$fontAnton: 'Anton';
+$fontUbuntu: 'Ubuntu';
+$red: #EF2828;
+$grey: #999999;
+$orange: #FFBC00;
+
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: $fontUbuntu;
+    margin-top: 2vw;
+
+    .contact-us {
+        padding: 2vw;
+        margin-left: 11vw;
+        width: 63vw;
+
+        .contact {
+            color: $orange;
+            font-family: $fontAnton;
+        }
+
+        .us {
+            margin-left: 1vw;
+            font-family: $fontAnton;
+        }
+
+        .box {
+            box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+            border-radius: 30px;
+            width: 80%;
+            padding: 4vw;
+
+            .form {
+
+                .input-box {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 1vw;
+
+                    .label {
+                        font-size: 0.8rem;
+                        font-family: $fontUbuntu;
+                        color: $grey;
+                    }
+
+                    .input {
+                        width: 50%;
+                        border: none;
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                        font-size: 0.8rem;
+                        font-family: $fontUbuntu;
+                        outline: none;
+                    }
+
+                    .textarea {
+                        width: 50%;
+                        border: none;
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                        resize: none;
+                    }
+
+                    .invalid-messsage {
+                        font-size: 0.6rem;
+                        font-family: $fontUbuntu;
+                        margin: 0;
+                        opacity: 0;
+                    }
+
+                    .has-error {
+                        color: $red;
+                        border-color: $red;
+                        opacity: 1;
+                    }
+                }
+
+                .submit-btn {
+                    padding: 1.5vw;
+                    background-color: $orange;
+                    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.08);
+                    border-radius: 16px;
+                    border: none;
+                    color: black;
+                    font-family: $fontUbuntu;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 18px;
+                }
+
+                .send {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .to-up {
+        width: 3vw;
+        height: 3vw;
+        cursor: pointer;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 5vw;
+
+        .contact-us {
+            width: 100%;
+            margin: 0;
+
+            .box {
+                width: 100%;
+
+                .form {
+        padding: 2vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .input-box {
+                        width: 100%;
+
+                        .input {
+                        width: 100%;
+                            font-size: 1rem;
+                            height: 1.5rem;
+                        }
+
+                        .textarea {
+                            width: 100%;
+                        }
+
+                    }
+
+                    .submit-btn {
+                        padding: 4vw;
+                        width: max-content;
+                    }
+                }
+            }
+        }
+
+        .to-up {
+            width: 4vw;
+            height: 4vw;
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+.container {
+.to-up {
+        width: 8vw;
+        height: 8vw;
+    }
+}
+}

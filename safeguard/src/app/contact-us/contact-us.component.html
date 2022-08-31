@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="contact-us">
+        <h1><span class="contact">CONTACT</span><span class="us">US</span></h1>
+        <div class="box">
+            <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div class="input-box">
+                    <label class="label"
+                        [ngClass]="{'has-error': form.get('name').invalid && form.get('name').touched}">Full
+                        Name</label>
+                    <input type="text" class="input" formControlName="name"
+                        [ngClass]="{'has-error': form.get('name').invalid && form.get('name').touched}">
+                    <h5 class="invalid-messsage"
+                        [ngClass]="{'has-error': form.get('name').invalid && form.get('name').touched}">
+                        Full Name is required</h5>
+                </div>
+                <div class="input-box">
+                    <label class="label"
+                        [ngClass]="{'has-error': form.get('company').invalid && form.get('company').touched}">
+                        Company Name</label>
+                    <input type="text" class="input" formControlName="company"
+                        [ngClass]="{'has-error': form.get('company').invalid && form.get('company').touched}">
+                    <h5 class="invalid-messsage"
+                        [ngClass]="{'has-error': form.get('company').invalid && form.get('company').touched}">
+                        Company Name is required</h5>
+                </div>
+                <div class="input-box">
+                    <label class="label"
+                        [ngClass]="{'has-error': form.get('phone').invalid && form.get('phone').touched}">
+                        Phone Number</label>
+                    <input type="text" class="input" formControlName="phone"
+                        [ngClass]="{'has-error': form.get('phone').invalid && form.get('phone').touched}">
+                    <h5 class="invalid-messsage"
+                        [ngClass]="{'has-error': form.get('phone').invalid && form.get('phone').touched}">
+                        Phone Number is invalid</h5>
+                </div>
+                <div class="input-box">
+                    <label class="label"
+                        [ngClass]="{'has-error': form.get('email').invalid && form.get('email').touched}">
+                        E-mail</label>
+                    <input type="text" class="input" formControlName="email"
+                        [ngClass]="{'has-error': form.get('email').invalid && form.get('email').touched}">
+                    <h5 class="invalid-messsage"
+                        [ngClass]="{'has-error': form.get('email').invalid && form.get('email').touched}">
+                        E-mail is invalid</h5>
+                </div>
+                <div class="input-box">
+                    <label class="label"
+                        [ngClass]="{'has-error': form.get('message').invalid && form.get('message').touched}">
+                        Write Us Messages</label>
+                    <textarea type="text" class="textarea" formControlName="message" rows="4"
+                        [ngClass]="{'has-error': form.get('message').invalid && form.get('message').touched}">
+                    </textarea>
+                    <h5 class="invalid-messsage"
+                        [ngClass]="{'has-error': form.get('message').invalid && form.get('message').touched}">
+                        Messages is required</h5>
+                </div>
+                <button class="submit-btn" type="submit" [disabled]="form.invalid" 
+                [ngClass]="{'send': form.valid}">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <picture>
+        <img src="assets/to-up.png" alt="button move up" class="to-up" (click)="upScrollFunction()">
+    </picture>
+</div>

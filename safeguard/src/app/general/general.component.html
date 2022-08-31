@@ -1,0 +1,74 @@
+<div class="container">
+    <header class="header" [ngClass]="{'show':!choose}">
+        <picture>
+            <img src="assets/logo.png" alt="logo" class="logo">
+        </picture>
+        <div class="big-menu">
+            <button class="button" [ngClass]="{focus: routActive==='home'}" (click)="toRoute('home')">Home</button>
+            <button class="button" [ngClass]="{focus: routActive==='about-us'}" (click)="toRoute('about-us')">About
+                Us</button>
+            <button class="button" [ngClass]="{focus: routActive==='what-we-do'}" (click)="toRoute('what-we-do')">What
+                We Do</button>
+            <button class="button" [ngClass]="{focus: routActive==='contact-us'}"
+                (click)="toRoute('contact-us')">Contact Us</button>
+        </div>
+        <div class="smoll-menu">
+            <button class="button" (click)="open()">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </button>
+        </div>
+    </header>
+    <div class="little-menu" [ngClass]="{'show':choose,'hidden':!choose}">
+        <div class="top">
+            <picture>
+                <img src="assets/logo.png" alt="logo" class="little-logo">
+            </picture>
+            <button class="close" (click)="close()">
+                <mat-icon>clear</mat-icon>
+            </button>
+        </div>
+        <div class="little-buttons">
+            <button class="little-button" [ngClass]="{focus: routActive==='home'}"
+                (click)="toRoute('home')">Home</button>
+            <button class="little-button" [ngClass]="{focus: routActive==='what-we-do'}"
+                (click)="toRoute('what-we-do')">What
+                We
+                Do</button>
+            <button class="little-button" [ngClass]="{focus: routActive==='about-us'}"
+                (click)="toRoute('about-us')">About
+                Us</button>
+            <button class="little-button" (click)="toRoute('about-us')">Our history</button>
+            <button class="little-button" [ngClass]="{focus: routActive==='contact-us'}"
+                (click)="toRoute('contact-us')">Contact
+                Us</button>
+        </div>
+        <div class="little-buttons">
+            <h5 class="services-text">Services</h5>
+            <button class="little-button">Training and Implementation</button>
+            <button class="little-button">Cyber Consultants</button>
+            <button class="little-button">Consultancy and brand protection</button>
+            <button class="little-button">Software</button>
+        </div>
+    </div>
+
+
+    <main class="main" [ngClass]="{'show':!choose}">
+        <div class="main-text">
+            <p class="never">NEVER CAUGHT OFF-GUARD AGAIN</p>
+            <p class="we-are">We are specialist in protecting your assets and reputation to make sure you
+                operate risk-free and focus on your core business.</p>
+            <button class="lear-more-btn"><span class="lear-more-btn-text">Learn More</span></button>
+            <picture class="helmet-box">
+                <img src="assets/scroll.png" alt="scroll down" class="scroll" (click)="bottomScrollFunction()">
+            </picture>
+        </div>
+        <picture>
+            <img src="assets/helmetf.png" alt="helmetf" class="helmetf">
+        </picture>
+    </main>
+    <div class="route">
+        <router-outlet></router-outlet>
+    </div>
+</div>

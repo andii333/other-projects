@@ -1,0 +1,59 @@
+body {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box {
+  border: 1px solid rgb(202, 202, 202);
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+}
+
+.month-name {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  border-bottom: 1px solid rgb(202, 202, 202);
+
+}
+
+.month-name-add {
+  color: blue;
+  width: 8vw
+}
+
+.day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.95vw;
+  height: 7vw;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.month {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.week-name {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.arrow {
+  cursor: pointer;
+  width: 5vw;
+  text-align: center;
+  background-color: rgb(220, 249, 250)
+}
+
+.background {
+  background-color: rgb(175, 175, 246)
+}
